@@ -13,7 +13,7 @@ class SecondReportingController < ApplicationController
     @all_clients = []
 
     ## Je vais chercher le CSV puis j'itère dessus ##
-    CSV.foreach(Rails.root.join('lib/orders-testBON.csv'), encoding: 'iso-8859-1:utf-8', liberal_parsing: true) do |row|
+    CSV.foreach(Rails.root.join('lib/orders-test.csv'), encoding: 'iso-8859-1:utf-8', liberal_parsing: true) do |row|
       ## Je crée une instance pour chaque client avec les infos du CSV, puis je l'insère dans l'array @all_clients ##
       @all_clients << { client: row[0].to_s, merchant_name: row[10].to_s, fresh_product: row[19].to_i, necessary_product: row[20].to_i, secondary_product: row[21].to_i, delivery_mode: row[26].to_s }
     end
