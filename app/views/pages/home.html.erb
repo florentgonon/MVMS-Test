@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Bienvenue</h1>
+<h2>Voici les 3 reportings :</h2>
+
+<p><%= link_to "Premier Reporting : Nombre de client unique, nombre de commande, nombre de livraison Click & Collect, nombre de livraison par le commercant, nombre de livraison par la poste", first_reporting_index_path, class: "red" %></p>
+<p><%= link_to "Deuxième Reporting : Listing des clients et nombres de commandes associées", second_reporting_index_path, class: "green" %></p>
+<p><%= link_to "Troisième Reporting : Nombre de visite pour le mois d'Avril et le mois de Mai", third_reporting_index_path, class: "blue" %></p>
+
+<div class="logo-mvms">
+  <%= image_tag "mvms.png", class: "mvms-img" %>
+</div>

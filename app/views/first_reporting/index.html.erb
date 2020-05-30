@@ -1,20 +1,27 @@
-<h1>Premier reporting</h1>
+<section id="first-reporting">
+  <h1>Premier reporting :</h1>
 
-<table>
-  <thead>
-    <th>Nombre de client unique</th>
-    <th>Nombre de commandes</th>
-    <th>Nombre de livraison Click & Collect</th>
-    <th>Nombre de livraison par le commercant</th>
-    <th>Nombre de livraison LaPoste</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= @uniq_client %></td>
-      <td><%= @order %></td>
-      <td><%= @click_and_collect_delivery %></td>
-      <td><%= @merchant_delivery %></td>
-      <td><%= @laposte_delivery %></td>
-    </tr>
-  </tbody>
-</table>
+  <table>
+    <thead>
+      <th>Nombre de client unique</th>
+      <th>Nombre de commandes</th>
+      <th>Nombre de livraison Click & Collect</th>
+      <th>Nombre de livraison par le commercant</th>
+      <th>Nombre de livraison LaPoste</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @uniq_client %></td>
+        <td><%= @order %></td>
+        <td><%= @click_and_collect_delivery %></td>
+        <td><%= @merchant_delivery %></td>
+        <td><%= @laposte_delivery %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="logo-mvms">
+    <%= image_tag "mvms.png", class: "mvms-img" %>
+  </div>
+</section>
+

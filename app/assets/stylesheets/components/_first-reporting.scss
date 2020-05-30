@@ -1,0 +1,33 @@
+#first-reporting {
+  h1 {
+    color: red;
+    text-decoration: underline;
+    padding-bottom: 50px;
+  }
+
+  table {
+    thead {
+      th {
+        border: 2px solid black;
+        text-align: center;
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          border: 2px solid black;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .logo-mvms {
+    text-align: center;
+
+    img.mvms-img {
+      width: 50%;
+    }
+  }
+}

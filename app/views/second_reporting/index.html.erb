@@ -1,19 +1,29 @@
-<h2>Deuxième reporting</h2>
+<section id="second-reporting">
+  <h1>Deuxième reporting :</h1>
 
-<table>
-  <thead>
-    <th>Listing des clients</th>
-    <th>Nombre de commandes par commerçant</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <% @client_list.each do |client| %>
-          <p><%= client %></p>
-        <% end %>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <table>
+    <thead>
+      <th>Listing des clients</th>
+      <th>Nombre de commandes par commerçant</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <% @client_list.each do |client| %>
+            <p><%= client %></p>
+          <% end %>
+        </td>
+        <td>
+          <% @orders_client.each do |orders| %>
+            <p><%= orders %></p>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-<p><%= @cclients %></p>
+  <div class="logo-mvms">
+    <%= image_tag "mvms.png", class: "mvms-img" %>
+  </div>
+</section>
+

@@ -1,14 +1,20 @@
-<h1>Troisième reporting</h1>
+<section id="third-reporting">
+  <h1>Troisième reporting</h1>
 
-<table>
-  <thead>
-    <th>Nombre de visite en AVRIL</th>
-    <th>Nombre de visite en MAI</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= @total_visit_april %></td>
-      <td><%= @total_visit_may %></td>
-    </tr>
-  </tbody>
-</table>
+  <table>
+    <thead>
+      <th>Nombre de visite en AVRIL</th>
+      <th>Nombre de visite en MAI</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @total_visit_april %></td>
+        <td><%= @total_visit_may %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="logo-mvms">
+    <%= image_tag "mvms.png", class: "mvms-img" %>
+  </div>
+</section>
