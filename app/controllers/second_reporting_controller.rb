@@ -11,8 +11,8 @@ class SecondReportingController < ApplicationController
   def recover_clients_from_csv
     @all_clients = []
 
-    CSV.foreach(Rails.root.join('lib/orders-test.csv'), encoding: 'iso-8859-1:utf-8') do |row|
-      @all_clients << { client: row[0].to_s, merchant_name: row[1].to_s, fresh_product: row[2].to_i, necessary_product: row[3].to_i, secondary_product: row[4].to_i, delivery_mode: row[5].to_s }
+    CSV.foreach(Rails.root.join('lib/orders-testBON.csv'), encoding: 'iso-8859-1:utf-8', liberal_parsing: true) do |row|
+      @all_clients << { client: row[0].to_s, merchant_name: row[10].to_s, fresh_product: row[19].to_i, necessary_product: row[20].to_i, secondary_product: row[21].to_i, delivery_mode: row[26].to_s }
     end
   end
 

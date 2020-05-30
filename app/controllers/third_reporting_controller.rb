@@ -12,7 +12,7 @@ class ThirdReportingController < ApplicationController
     @all_visits = []
 
     CSV.foreach(Rails.root.join('lib/data-test.csv'), encoding: 'iso-8859-1:utf-8', liberal_parsing: true) do |row|
-      @all_visits << { date: row[0], visit_associated: row[1].to_s }
+      @all_visits << { date: row[0], visit_associated: row[1].to_i }
     end
     # return @all_visits
   end
@@ -38,30 +38,22 @@ class ThirdReportingController < ApplicationController
   def april_visit
     sort_by_month
 
-    @total_april = 0
+    @total_april = []
 
     @april_visits.each do |visit|
-      visit.each do |key, value|
-        if key == :date
-          @total_april += value.to_i
-        end
-      end
+      @total_april << visit[:visit_associated]
     end
-    return @total_april
+    return @total_april.sum
   end
 
   def may_visit
     sort_by_month
 
-    @total_may = 0
+    @total_may = []
 
     @may_visits.each do |visit|
-      visit.each do |key, value|
-        if key == :date
-          @total_may += value.to_i
-        end
-      end
+      @total_may << visit[:visit_associated]
     end
-    return @total_may
+    return @total_may.sum
   end
 end
